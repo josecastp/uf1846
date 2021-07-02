@@ -18,14 +18,14 @@
     <main>
         <header><h1 class="header">Formulario de entrada de datos</h1></header>
         <div class="w3-container w3-row">
-            <form class="w3-container w3-card-4 w3-quarter" action="/post-country" method="POST">
+            <form class="w3-container w3-card-4 w3-quarter" action="/post-country" method="POST"><!-- falta unos atributos -->
                 <h1>Select Your Country</h1>
 
                 <select class="w3-select">
                   <option value="" disabled selected>Select A Country</option>
-                  <option value="spain" id="countryName">España</option>
-                  <option value="venezuela" id="countryName">Venezuela</option>
-                  <option value="peru" id="countryName">Peru</option>
+                  <option value="spain" name="countryName">España</option>
+                  <option value="venezuela" name="countryName">Venezuela</option>
+                  <option value="peru" name="countryName">Peru</option>
                   
                 </select>
 
@@ -35,7 +35,7 @@
                 <label for="urlFlag">URL Flag: </label>
                 <input class="w3-input" type="text" id="urlFlag"></input>
 
-                <p><input type="submit" class="w3-btn w3-teal"></input>
+                <p><input value="enviar" type="submit" class="w3-btn w3-teal"></input>
                 </p>
             </form>
             <div class="w3-container w3-card-4 w3-quarter">

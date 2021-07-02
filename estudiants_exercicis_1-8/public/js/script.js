@@ -9,10 +9,7 @@
         return data;
 
     }
-   /*  router.get('/apartment/:idAparment', async (req, res)=>{  
-        //TEST:
-        console.log("Objeto del documento: ", req.params) //Params incluye el objeto apartamentoID
-        console.log("Mostrar por ID- valor:   ", req.params.idAparment); //valor del campo _id de la coleccion */
+
 
     /**
      * Exercici 5b. Haz que las opciones del array de objetos 'optionsValues' se carguen dinàmicamente cuando la pàgina se renderice en el navegador
