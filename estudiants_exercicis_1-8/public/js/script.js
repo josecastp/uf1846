@@ -1,13 +1,18 @@
 {
-    async function getCountryDetails() {
-
-        const response = await fetch(`https://restcountries.eu/rest/v2/name/`);
+    async function getCountryDetails(countryName) { 
+        console.log("countryName: ",countryName)
+    
+        const response = await fetch(`https://restcountries.eu/rest/v2/name/${countryName}`);
 
         const data = await response.json();
 
         return data;
 
     }
+   /*  router.get('/apartment/:idAparment', async (req, res)=>{  
+        //TEST:
+        console.log("Objeto del documento: ", req.params) //Params incluye el objeto apartamentoID
+        console.log("Mostrar por ID- valor:   ", req.params.idAparment); //valor del campo _id de la coleccion */
 
     /**
      * Exercici 5b. Haz que las opciones del array de objetos 'optionsValues' se carguen dinàmicamente cuando la pàgina se renderice en el navegador
@@ -34,7 +39,8 @@
      */
 
     async function setCountryFlag(event) {
-        let countryName = event.value;
+        let countryName = event.target.value;
+        console.log("evento value---------->",event)
 
         let countryData = await getCountryDetails(countryName);
         // Descomenta la següent línia si no has aconseguit implementar la primera part de l'exercici. Comenta la línia anterior també.   
@@ -57,7 +63,7 @@
 
 
     // Descomentar para probar el Ejercicio 6
-    // console.log("Información sobre España:", getCountryDetails('spain'));
+    //console.log("Información sobre España:", getCountryDetails('spain'));
 
     document.querySelector('.w3-select').onchange = setCountryFlag;
 

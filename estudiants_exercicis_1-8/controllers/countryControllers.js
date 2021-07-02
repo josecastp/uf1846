@@ -5,8 +5,14 @@ exports.getHomePage = (req, res) => {
 }
 
 exports.postSendData = (req, res) => {
+    //let countryName = element.querySelector('#countryName')
+   // console.log("countryName--> ",countryName)
+    /* const namename: String,
+    flagURL: String,
+    population: Number */
+    let countryName;
     const fakeData = {
-        conuntryName: "spain",
+        conuntryName: countryName,
         population: 46438420,
         urlFlag: "https://restcountries.eu/data/esp.svg"
     }

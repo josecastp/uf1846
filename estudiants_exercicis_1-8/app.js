@@ -4,7 +4,7 @@ const app = express();
 const mongoose = require('mongoose');
 
 // TODO: Cambar a tu Conneciton String a MongoDB Atlas; base de datos 'countries'
-const url = 'mongodb://localhost:27017/countries';
+const url = 'mongodb+srv://root:root@cluster0.kmx55.mongodb.net/countries';
 
 
 app.set('view engine', 'ejs');
@@ -24,5 +24,6 @@ mongoose.connect(url, { useNewUrlParser: true }, (error) => {
         console.log("Error al conectar a la BBDD: ", error);
         return;
     }
+    console.log("Conectado a la BBDD")
     app.listen(3000);
 });
